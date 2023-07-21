@@ -25,19 +25,19 @@ def singlegame(curlplayer):
     val=['' for i in range(9)]
     playerpos={'X':[], 'O':[]}
     while True:
-            ttt(val)
-            try:
-                print('player',curplayer,'turn.Choose your block:',end='')
-                chance=int(input())
-            except ValueError:
-                print('Invalid Input!Try Again!!!')
-                continue
-            if chance<1 or chance>9:
-                print('Invalid input!Try again!!!')
-                continue
-            if val[chance-1] !='':
-                 print('Oops the place is already occupied.try again!!!')
-                 continue
-            val[chance-1]=curplayer
-            playerpos[curplayer].append(chance)
+        ttt(val)
+        try:
+            print('player',curplayer,'turn.Choose your block:',end='')
+            chance=int(input())
+        except ValueError:
+            print('Invalid Input!Try Again!!!')
+            continue
+        if chance<1 or chance>9:
+            print('Invalid input!Try again!!!')
+            continue
+        if val[chance-1] !='':
+            print('Oops the place is already occupied.try again!!!')
+            continue
+        val[chance-1]=curplayer
+        playerpos[curplayer].append(chance)
 #To be continued
